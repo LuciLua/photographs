@@ -1,0 +1,9 @@
+.main{
+    min-height: calc(100vh - var(--footerAndHeader));
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 9;
+}

@@ -1,0 +1,39 @@
+*::before,
+*,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --headerHeight: 70px;
+    --footerHeight: 200px;
+    --footerAndHeader: calc( var(--footerHeight) + var(--headerHeight) );
+
+    --background-footer: #fff;
+    --background-header: rgba(0, 0, 0, 0.489);
+    --global-font-color: rgb(255, 255, 255);
+    --global-font-color-inverse: rgb(21, 21, 21);
+}
+
+html,
+body {
+    font-family: 'montserrat', sans-serif;
+
+    h1 {
+        font-weight: 800;
+    }
+
+    h2 {
+        font-weight: 600;
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+
+    p {
+        font-weight: 500;
+    }
+}
