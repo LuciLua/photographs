@@ -46,10 +46,13 @@
 
             position: relative;
 
+            padding: 20px;
+
             h1 {
                 color: rgb(255, 252, 252);
                 font-size: 4rem;
                 font-weight: 600;
+                word-break: break-all;
             }
 
             h2 {
@@ -57,6 +60,9 @@
                 z-index: 9;
                 font-size: 1.3rem;
                 font-weight: 200;
+
+                margin-top: 15px;
+                line-height: 2;
             }
 
             .btnCollection {
