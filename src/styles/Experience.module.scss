@@ -1,0 +1,12 @@
+.Experience{
+    animation: 1s fade linear;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 80%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

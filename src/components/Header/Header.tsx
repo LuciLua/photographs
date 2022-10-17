@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "./Header.module.scss"
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose, AiFillGithub, AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
 
 function Header() {
 
@@ -26,8 +26,22 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <h1>LuciLua</h1>
+            <div className={styles.socialContainer}>
+                <div className={styles.socialItem}>
+                    <Link title="GitHub" href={'https://github.com/lucilua'}>
+                        <AiFillGithub title="GitHub" />
+                    </Link>
+                </div>
+                <div className={styles.socialItem}>
+                    <Link title="Instagram" href={'https://www.instagram.com/luci_lua81/'}>
+                        <AiFillInstagram title="Instagram" />
+                    </Link>
+                </div>
+                <div className={styles.socialItem}>
+                    <Link title="Twitter" href={'https://twitter.com/L4dev/'}>
+                        <AiFillTwitterSquare title="Twitter" />
+                    </Link>
+                </div>
             </div>
             <button className={`${styles.toggleMenu} ${styles.visible}`} onClick={toggleMenu}>
                 <span className={`${styles.openMenu} ${styles.visible}`}>
@@ -44,27 +58,27 @@ function Header() {
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/'}>
+                    <Link href={'/About'}>
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/'}>
+                    <Link href={'https://luci-lua.tk/'}>
                         Portfolio
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/'}>
+                    <Link href={'/Experience'}>
                         Experience
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/'}>
+                    <Link href={'/Gallery'}>
                         Photos
                     </Link>
                 </li>
             </ul>
-        </header>
+        </header >
     )
 }
 

@@ -9,13 +9,15 @@
     justify-content: center;
     align-items: center;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    position: fixed;
+    box-shadow: 0 4px 13px rgba(0, 0, 0, 0.5);
     top: 0;
+    z-index: 10;
+
+    position: fixed;
+
+    backdrop-filter: blur(10px);
 
     button.toggleMenu {
-        // display: flex;
         display: none;
         justify-content: center;
         align-items: center;
@@ -32,8 +34,48 @@
         cursor: pointer;
     }
 
-    div.logo {
+    div.socialContainer {
         margin-left: 30px;
+
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 15px;
+
+        margin-right: auto;
+
+        .socialItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+            width: 30px;
+            height: 30px;
+
+            cursor: pointer;
+
+            &>svg {
+
+                width: 30px;
+                height: 30px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: relative;
+                color: rgb(231, 231, 231);
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                }
+            }
+
+        }
     }
 
     ul.menu {
@@ -56,28 +98,31 @@
 
 @media (max-width: 700px) {
     .header {
-        .logo{
+        .logo {
             position: absolute;
             left: 0;
         }
-        button.toggleMenu.visible{
+
+        button.toggleMenu.visible {
             color: var(--global-font-color);
             display: flex;
         }
+
         span.openMenu,
-        span.closeMenu{
+        span.closeMenu {
             display: none;
         }
-        span.visible{
+
+        span.visible {
             display: flex;
         }
 
         ul.menu {
             display: none;
 
-            li{
-                a{
-                color: var(--global-font-color-inverse);
+            li {
+                a {
+                    color: var(--global-font-color-inverse);
                 }
             }
         }
@@ -85,17 +130,36 @@
         ul.menu.visible {
             display: flex;
             flex-direction: column;
-            align-self: flex-start;
+            // align-self: flex-start;
+
             margin-right: 0;
 
             right: 0;
-            top: 60px;
+            top: 70px;
+
             position: absolute;
 
+            padding: 0;
+
             li {
-                margin: 0;
-                background-color: #fff;
-                padding: 20px 15px;
+                
+                background-color: rebeccapurple;
+                width: 100%;
+
+                position: relative;
+
+                a {
+                    display: flex;
+                    padding: 10px 20px;
+                    position: relative;
+                    background-color: #fff;
+
+                    &:hover{
+                        background-color: var(--global-font-color-inverse);
+                        color: var(--global-font-color);
+                    }
+
+                }
             }
         }
     }

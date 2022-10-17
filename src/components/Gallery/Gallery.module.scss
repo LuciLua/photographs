@@ -1,0 +1,117 @@
+.Gallery {
+    position: relative;
+
+    padding: 5px;
+
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    .blockContainer {
+        display: grid;
+        gap: 0 5px;
+        margin-bottom: 5px;
+
+        &:nth-child(1) {
+            height: 50vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        &:nth-child(2) {
+            height: 25vh;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        &:nth-child(3) {
+            height: 25vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .block {
+            display: flex;
+
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            overflow: hidden;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 110px;
+
+                background-color: #0006;
+                // background-color: rgb(222, 220, 57);
+                backdrop-filter: blur(3px);
+                color: #fff;
+
+                z-index: 25;
+
+                bottom: -110px;
+                font-weight: 400;
+                font-size: 15px;
+                border-radius: 12px;
+
+                position: absolute;
+                transition: 0.5s;
+
+
+                &::after {
+
+                    content: 'hover';
+                    font-size: 12px;
+                    font-weight: 100;
+
+                    display: flex;
+                    justify-content: center;
+
+                    background-color: #0006;
+                    width: 80px;
+                    height: 20px;
+                    position: absolute;
+
+                    border-top: 2px solid rgb(117, 140, 121);
+
+                    top: -20px;
+                    left: 25px;
+                    border-radius: 3px 3px 0 0 ;
+                }
+
+            }
+
+            p:hover {
+                transition: 0.5s;
+                bottom: 0;
+            }
+
+            &:not(img)>p {
+                padding: 25px;
+            }
+
+            img {
+                position: relative;
+                border-radius: 14px;
+                filter: brightness(0.6) contrast(0.9) saturate(0.5);
+                transition: 0.6s;
+
+                &:hover {
+                    filter: brightness(1) contrast(1) saturate(1);
+                    transition: 0.6s;
+
+                }
+
+            }
+        }
+    }
+}

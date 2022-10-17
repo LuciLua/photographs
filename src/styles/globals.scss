@@ -9,7 +9,7 @@
 :root {
     --headerHeight: 70px;
     --footerHeight: 200px;
-    --footerAndHeader: calc( var(--footerHeight) + var(--headerHeight) );
+    --footerAndHeader: calc(var(--footerHeight) + var(--headerHeight));
 
     --background-footer: #fff;
     --background-header: rgba(0, 0, 0, 0.489);
