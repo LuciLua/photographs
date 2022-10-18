@@ -31,19 +31,26 @@
 
         h1 {
             color: rgb(255, 252, 252);
-            font-size: 4rem;
+            font-size: 70px;
             font-weight: 600;
-            word-break: break-all;
+
+            @media (max-width: 700px) {
+                font-size: 12vw;
+            }
         }
 
         h2 {
             color: rgb(255, 252, 252);
             z-index: 9;
-            font-size: 1.3rem;
+            font-size: 17px;
             font-weight: 200;
 
             margin-top: 15px;
             line-height: 2;
+
+            @media (max-width: 700px) {
+                font-size: 5vw;
+            }
         }
 
         .btnCollection {
