@@ -81,6 +81,7 @@
 
 
                 &::after {
+                    backdrop-filter: blur(3px);
 
                     content: 'hover';
                     font-size: 12px;
