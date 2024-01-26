@@ -13,14 +13,14 @@ export function Galery() {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "140%"]);
+    const x = useTransform(scrollYProgress, [0, 0.5], ["1%", "-90%"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["100%", "900%"]);
 
     return (
         <div className="bg-neutral-800">
-            <div ref={targetRef} className="relative h-[355vh] bg-neutral-900">
+            <div ref={targetRef} className="relative h-[4300vh] bg-neutral-900">
                 <h1 className="text-white text-[50px] top-0 absolute">GALL_RY</h1>
-                <div className="sticky flex p-5 flex-col top-[0px] justify-center h-screen items-center overflow-hidden">
+                <div className="sticky flex p-5 flex-col top-[0px] justify-center h-screen items-start overflow-hidden">
                     <motion.div style={{ x }} className="flex gap-4  z-50 relative" >
                         {numerosImagens.map(i => {
                             return (
