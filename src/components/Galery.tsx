@@ -24,8 +24,8 @@ export function Galery() {
                     <motion.div style={{ x }} className="flex gap-4  z-50 relative" >
                         {numerosImagens.map(i => {
                             return (
-                                <motion.div dragTransition={{ max: 100, min: 100, bounceStiffness: .1, bounceDamping: 3 }} className="z-[100] relative cursor-grab overflow-hidden object-cover  w-[300px] min-w-[300px] h-[250px]" dragSnapToOrigin draggable drag>
-                                    <Image fill src={`/photos/${i}.webp`} className="pointer-events-none object-cover" />
+                                <motion.div key={i} dragTransition={{ max: 100, min: 100, bounceStiffness: .1, bounceDamping: 3 }} className="z-[100] relative cursor-grab overflow-hidden object-cover  w-[300px] min-w-[300px] h-[250px]" dragSnapToOrigin draggable drag>
+                                    <Image fill src={`/photos/${i}.webp`} alt="img" className="pointer-events-none object-cover" />
                                 </motion.div>
                             )
                         })}
