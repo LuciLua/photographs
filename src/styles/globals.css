@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #131313;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+*::-webkit-scrollbar{
+  /* display: none; */
+}
+
+.grain {
+  width: 100%;
+  min-height: 100svh;
+  height: fit-content;
+  /* min-height: 100svh; */
+  background-image: url("../../public/assets/grain.png");
+  background-size: 250px;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+:root {
+  --primary-color-10: #200d47;
+  --primary-color-25: #4309b7;
+  --primary-color-50: #5500ff;
+  --primary-color-75: #9970ea;
+  --primary-color-100: #cdb4ff;
+
+  --neutral-color-10: #0a0a0a;
+  --neutral-color-25: #1d1d1d;
+  --neutral-color-50: #2f2f2f;
+  --neutral-color-75: #a6a6a6;
+  --neutral-color-100: #ededed;
+
+  --black: #000;
+  --black-opacity-85: #00000035;
+  --black-opacity-90: #0000000f;
+  --black-opacity-95: #00000008;
+  --white: #fff;
+  --white-opacity-85: #ffffff35;
+  --white-opacity-90: #ffffff0f;
+  --white-opacity-95: #ffffff08;
+}
